@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .options {
+            margin: 10px 0;
+        }
+        .options label {
+            display: block;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .correct-answers {
+            margin-top: 10px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Quiz</h1>
+        <nav id="menu">
+            <p><a href="index.html">Página Inicial</a></p>
+            <p><a href="Estrutura.html">Estrutura</a></p>
+            <p><a href="Funcoes.html">Funções</a></p>
+            <p><a href="Tipos.html">Tipos</a></p>
+            <p><a href="Importancia.html">Importância</a></p>
+            <p><a href="Curiosidade.html">Curiosidades</a></p>
+            <p><a href="referências.html">Referências</a></p>
+        </nav>
+    </header>
+
+    <article id="conteudo">
+        <section>
+            <h2 id="topicos">Células em Foco: Teste seu Conhecimento</h2>
+
+            <div class="quiz-container">
+            <p id="li_titulo"> <strong> <ins>Teste seus conhecimentos sobre células animais!</ins> </strong></p>
+            <p>Neste quiz, você encontrará perguntas que vão avaliar o que você aprendeu sobre a estrutura e a função das células. Responda com atenção e descubra o quanto você sabe sobre esse fascinante universo celular.</p>
+
+            <p><strong>Boa sorte!</strong></p>
+                
+                <div id="quiz">
+                    <div class="question">
+                        <p>1. Qual é a principal função da membrana plasmática?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q1" value="a"> Produzir energia</label>
+                            <label><input type="radio" name="q1" value="b"> Proteger a célula</label>
+                            <label><input type="radio" name="q1" value="c"> Controlar a entrada e saída de substâncias</label>
+                            <label><input type="radio" name="q1" value="d"> Armazenar informação genética</label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <p>2. Qual organela é responsável pela produção de energia na célula?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q2" value="a"> Lisossomo</label>
+                            <label><input type="radio" name="q2" value="b"> Mitocôndria</label>
+                            <label><input type="radio" name="q2" value="c"> Ribossomo</label>
+                            <label><input type="radio" name="q2" value="d"> Núcleo</label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <p>3. Qual é a função dos ribossomos?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q3" value="a"> Armazenar nutrientes</label>
+                            <label><input type="radio" name="q3" value="b"> Sintetizar proteínas</label>
+                            <label><input type="radio" name="q3" value="c"> Transportar substâncias</label>
+                            <label><input type="radio" name="q3" value="d"> Produzir lipídios</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>4. Qual estrutura contém o material genético da célula?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q4" value="a"> Citoplasma</label>
+                            <label><input type="radio" name="q4" value="b"> Lisossomo</label>
+                            <label><input type="radio" name="q4" value="c"> Núcleo</label>
+                            <label><input type="radio" name="q4" value="d"> Retículo endoplasmático</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>5. Os lisossomos são conhecidos como "as fábricas de energia" da célula.</p>
+                        <div class="options">
+                            <label><input type="radio" name="q5" value="a"> Verdadeiro</label>
+                            <label><input type="radio" name="q5" value="b"> Falso</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>6. Qual organela é responsável pela síntese de lipídios?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q6" value="a"> Retículo endoplasmático liso</label>
+                            <label><input type="radio" name="q6" value="b"> Golgi</label>
+                            <label><input type="radio" name="q6" value="c"> Mitocôndria</label>
+                            <label><input type="radio" name="q6" value="d"> Ribossomo</label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <p>7. O que é o citoplasma?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q7" value="a"> A parte da célula onde as organelas estão suspensas</label>
+                            <label><input type="radio" name="q7" value="b"> A membrana que envolve a célula</label>
+                            <label><input type="radio" name="q7" value="c"> O material genético da célula</label>
+                            <label><input type="radio" name="q7" value="d"> A estrutura responsável pela produção de proteínas</label>
+                        </div>
+                    </div>
+                    
+                    <button onclick="calcularResultado()">Enviar Respostas</button>
+                    <div class="result" id="resultado"></div>
+                    <div class="correct-answers" id="respostas-certas"></div>
+                </div>
+            </div>
+
+            <script>
+                function calcularResultado() {
+                    let score = 0;
+                    const respostasCorretas = {
+                        q1: 'c',
+                        q2: 'b',
+                        q3: 'b',
+                        q4: 'c',
+                        q5: 'b',
+                        q6: 'a',
+                        q7: 'a'
+                    };
+
+                    let respostasErradas = [];
+
+                    for (let i = 1; i <= 7; i++) {
+                        const respostaSelecionada = document.querySelector(`input[name="q${i}"]:checked`);
+                        if (respostaSelecionada && respostaSelecionada.value === respostasCorretas[`q${i}`]) {
+                            score++;
+                        } else {
+                            respostasErradas.push(`Pergunta ${i}: ${respostasCorretas[`q${i}`]}`);
+                        }
+                    }
+
+                    document.getElementById('resultado').innerText = `Você acertou ${score} de 7 perguntas!`;
+
+                    if (respostasErradas.length > 0) {
+                        document.getElementById('respostas-certas').innerHTML = `<strong>Respostas corretas:</strong><br>${respostasErradas.join('<br>')}`;
+                    } else {
+                        document.getElementById('respostas-certas').innerText = '';
+                    }
+                }
+            </script>
+
+        </section>
+    </article>
+
+    <footer id="rodape">
+        <p>Todos os direitos reservados &copy;Emanuelly Arantes de Oliveira.</p>
+    </footer>
+</body>
+</html>
